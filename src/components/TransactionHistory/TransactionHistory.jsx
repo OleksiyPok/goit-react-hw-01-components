@@ -1,5 +1,12 @@
 import css from "./TransactionHistory.module.css"
-export const TransactionHistory = () => {
+
+export const TransactionHistory = ({
+        id,
+        type,
+        amount,
+        currency
+    }) => {
+    
     return (
         <table className="transaction-history">
             <thead>

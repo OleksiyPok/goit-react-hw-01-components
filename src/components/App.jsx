@@ -1,4 +1,5 @@
 import user from "user.json";
+// import users from "users.json";
 import data from "data.json";
 import friends from "friends.json";
 import transactions from "transactions.json";
@@ -13,28 +14,13 @@ import { FriendList } from "components/FriendList/FriendList";
 export const App = () => {
   return (    
     <div>   
-      <Profile 
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
       
-      <Statistics title="Upload stats" stats={data} />      
+      <Profile user={user} />
+      {/* <Profile userList = {users}  /> */}
 
-      {/* {friends.map(friend => (
-        <FriendList
-          key = {friend.id}
-          avatar={friend.avatar}
-          name={friend.name}
-          isOnline={friend.isOnline}
-        />
-      ))} */}
+      <Statistics title="Upload stats" stats={data} /> 
 
-      <FriendList 
-        friendList = {friends}
-      />
+      <FriendList friendList = {friends} />
       
       {/* <TransactionHistory items={transactions} /> */}
     </div>
