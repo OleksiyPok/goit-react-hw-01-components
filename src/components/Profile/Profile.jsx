@@ -1,7 +1,7 @@
 import css from "./Profile.module.css"
 import defaultAvatar from '../../img/defaultAvatar.png'
 
-export const Profile = ({ user }) => {    
+export const Profile = ({ user }) => {   
     return (                
         <div className="profile">
             <div className="description">
