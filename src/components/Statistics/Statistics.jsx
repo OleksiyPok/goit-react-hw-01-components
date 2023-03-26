@@ -4,12 +4,12 @@ import css from './Statistics.module.css';
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
-      {title && <h2 className="title">{title}</h2>}
-      <ul className="stat-list">
+      {title && <h2 className={css.title}>{title}</h2>}
+      <ul className={css['stat-list']}>
         {stats.map(item => (
-          <li className="item" key={item.id}>
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}</span>
+          <li className={css.item} key={item.id}>
+            <span className={css.label}>{item.label}</span>
+            <span className={css.percentage}>{item.percentage}%</span>
           </li>
         ))}
       </ul>
@@ -27,3 +27,9 @@ Statistics.propTypes = {
     })
   ),
 };
+
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }
