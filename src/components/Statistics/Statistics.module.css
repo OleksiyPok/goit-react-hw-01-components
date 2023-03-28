@@ -1,5 +1,5 @@
 .statistics {
-  border: 1px solid transparent;
+  border-top: 1px solid transparent;
   position: relative;
   margin-top: 20px;
   border-radius: 4px;
@@ -23,11 +23,10 @@
 .stat-list {
   list-style: none;
   display: flex;
+  border-radius: 4px;
 }
 
 .item {
-  background-color: rgb(10, 197, 239);
-  border: 1px solid rgb(9, 103, 124);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +34,14 @@
   gap: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.item:first-child {
+  border-bottom-left-radius: 4px;
+}
+
+.item:last-child {
+  border-bottom-right-radius: 4px;
 }
 
 .label {
