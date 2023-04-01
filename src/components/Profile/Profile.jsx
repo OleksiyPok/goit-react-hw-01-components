@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
-import { ProfileUser } from 'components/Profile/ProfileUser/ProfileUser';
-import { ProfileStats } from 'components/Profile/ProfileStats/ProfileStats';
+import { ProfileUser } from 'components/ProfileUser/ProfileUser';
+import { ProfileStats } from 'components/ProfileStats/ProfileStats';
 
 export const Profile = ({ profile }) => {
   const { username, avatar, tag, location } = profile;

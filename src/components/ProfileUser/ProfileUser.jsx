@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import defaultAvatar from '../../../img/defaultAvatar.png';
+import defaultAvatar from '../../img/defaultAvatar.png';
 import css from './ProfileUser.module.css';
 
 export const ProfileUser = ({ user }) => {

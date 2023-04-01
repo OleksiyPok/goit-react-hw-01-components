@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   margin: 0;
   background-color: rgb(231 236 242);

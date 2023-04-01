@@ -21,7 +21,6 @@
 }
 
 .stat-list {
-  list-style: none;
   display: flex;
   border-radius: 4px;
 }
