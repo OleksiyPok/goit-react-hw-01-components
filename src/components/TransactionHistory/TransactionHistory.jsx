@@ -4,22 +4,22 @@ import css from './TransactionHistory.module.css';
 export const TransactionHistory = ({ transactionList }) => {
   return (
     <table className={css.transactionHistory}>
-      <thead className={css.thead}>
+      <thead>
         <tr>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
         </tr>
       </thead>
-      {transactionList.map(transaction => (
-        <tbody className={css.tbody} key={transaction.id}>
-          <tr>
-            <td className={css.td}>{transaction.type}</td>
-            <td className={css.td}>{transaction.amount}</td>
-            <td className={css.td}>{transaction.currency}</td>
+      <tbody>
+        {transactionList.map(transaction => (
+          <tr key={transaction.id}>
+            <td>{transaction.type}</td>
+            <td>{transaction.amount}</td>
+            <td>{transaction.currency}</td>
           </tr>
-        </tbody>
-      ))}
+        ))}
+      </tbody>
     </table>
   );
 };

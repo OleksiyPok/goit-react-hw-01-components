@@ -9,12 +9,33 @@
   border-collapse: collapse;
 }
 
-.thead {
+thead {
   background-color: #00bcd5;
   color: rgb(255 255 255);
-  border-spacing: 0px;
 }
 
-.td {
+th,
+td {
   border: solid 1px #e6e6e6;
+  padding: 10px;
+}
+
+th {
+  color: #e4f6fa;
+}
+
+td {
+  color: #8e939c;
+}
+
+/* tbody tr:nth-child(odd) {
+  background: #fff;
+} */
+
+/* tbody tr:nth-child(odd) td {
+  background: red;
+} */
+
+tbody tr:nth-child(even) {
+  background: #ecf1f3;
 }
