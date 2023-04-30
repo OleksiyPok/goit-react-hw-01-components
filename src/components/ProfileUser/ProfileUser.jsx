@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import defaultAvatar from '../../img/defaultAvatar.png';
 import css from './ProfileUser.module.css';
 
-export const ProfileUser = ({ user }) => {
-  const { username, avatar, tag, location } = user;
+export const ProfileUser = ({ person }) => {
+  const { username, avatar, tag, location } = person;
+
   return (
     <div className={css.description}>
       <img

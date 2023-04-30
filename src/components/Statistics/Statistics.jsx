@@ -3,6 +3,7 @@ import css from './Statistics.module.css';
 import { getRandomColor } from '../../utils/index';
 
 export const Statistics = ({ title, stats }) => {
+  console.log(stats);
   return (
     <section className={css.statistics}>
       {title && <h2 className={css.title}>{title}</h2>}

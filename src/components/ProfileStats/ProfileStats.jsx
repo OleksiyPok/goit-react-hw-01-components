@@ -3,6 +3,7 @@ import css from './ProfileStats.module.css';
 
 export const ProfileStats = ({ stats }) => {
   const { followers = 0, views = 0, likes = 0 } = stats;
+
   return (
     <ul className={css.statsList}>
       <li className={css.statsItem}>
