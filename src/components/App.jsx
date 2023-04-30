@@ -9,7 +9,6 @@ import { FriendList } from 'components/FriendList';
 import { TransactionHistory } from 'components/TransactionHistory';
 
 export const App = () => {
-  console.log(data);
   return (
     <div>
       <Profile
