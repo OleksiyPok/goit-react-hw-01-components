@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css';
+
 import { getRandomColor } from '../../utils/index';
+
+import css from './Statistics.module.css';
 
 export const Statistics = ({ title, stats }) => {
   return (
@@ -25,10 +27,10 @@ export const Statistics = ({ title, stats }) => {
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       id: PropTypes.string.isRequired,
-      label: PropTypes.string,
-      percentage: PropTypes.number,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
-  ),
+  ).isRequired,
 };

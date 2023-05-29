@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
+
 import defaultAvatar from '../../img/defaultAvatar.png';
+
 import css from './ProfileUser.module.css';
 
 export const ProfileUser = ({ person }) => {
@@ -20,9 +22,10 @@ export const ProfileUser = ({ person }) => {
 };
 
 ProfileUser.propTypes = {
-  user: PropTypes.object,
-  username: PropTypes.string,
-  avatar: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
+  person: PropTypes.exact({
+    username: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+  }),
 };

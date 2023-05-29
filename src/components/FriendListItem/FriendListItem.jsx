@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
-import defaultAvatar from '../../img/defaultAvatar.png';
+
 import { getStatusColor } from '../../utils/index';
+
+import defaultAvatar from '../../img/defaultAvatar.png';
+
 import css from './FriendListItem.module.css';
 
-export const FriendListItem = ({ isOnline, avatar, name }) => {
+export const FriendListItem = ({ friendPerson }) => {
+  const { id, isOnline, avatar, name } = friendPerson;
   const statusColor = getStatusColor(isOnline);
+
   return (
-    <>
-      <span className={css.status + ' ' + css[statusColor]}></span>
+    <li className={css.item}>
+      <span className={`${css.status} ${css[statusColor]}`}></span>
       <img
         className={css.avatar}
         src={avatar || defaultAvatar}
@@ -15,16 +20,15 @@ export const FriendListItem = ({ isOnline, avatar, name }) => {
         width="48"
       />
       <p className={css.name}> {name} </p>
-    </>
+    </li>
   );
 };
 
 FriendListItem.propTypes = {
-  friend: PropTypes.arrayOf(
-    PropTypes.shape({
-      isOnline: PropTypes.bool,
-      avatar: PropTypes.string,
-      name: PropTypes.string,
-    })
-  ),
+  friendPerson: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    avatar: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+  }),
 };

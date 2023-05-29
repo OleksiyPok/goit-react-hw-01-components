@@ -1,3 +1,14 @@
+.item {
+  border-radius: 4px;
+  background-color: rgb(255 255 255);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 8px;
+  padding: 10px;
+}
+
 .status {
   width: 20px;
   height: 20px;
