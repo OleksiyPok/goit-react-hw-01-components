@@ -4,9 +4,9 @@ import { getStatusColor } from '../../utils/index';
 
 import defaultAvatar from '../../img/defaultAvatar.png';
 
-import css from './FriendListItem.module.css';
+import css from './FriendsListItem.module.css';
 
-export const FriendListItem = ({ friendPerson }) => {
+export const FriendsListItem = ({ friendPerson }) => {
   const { id, isOnline, avatar, name } = friendPerson;
   const statusColor = getStatusColor(isOnline);
 
@@ -24,7 +24,7 @@ export const FriendListItem = ({ friendPerson }) => {
   );
 };
 
-FriendListItem.propTypes = {
+FriendsListItem.propTypes = {
   friendPerson: PropTypes.shape({
     id: PropTypes.number.isRequired,
     avatar: PropTypes.string,
