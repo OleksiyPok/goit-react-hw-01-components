@@ -27,5 +27,5 @@ ProfileUser.propTypes = {
     avatar: PropTypes.string,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };
